@@ -1,6 +1,5 @@
 ---
-
-- name: "configuration play." 
+- name: "Comfigure udapeople infrastructure." 
   hosts: web
   user: ubuntu
   become: true
@@ -34,5 +33,7 @@
     - TYPEORM_MIGRATIONS_DIR: "{{ lookup('env', 'TYPEORM_MIGRATIONS_DIR')}}"
 
   roles:
-    - python
+    # - python 
+    # - configure-server
     - node
+    # - configure-prometheus-node-exporter
